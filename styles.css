@@ -31,6 +31,7 @@
 :root {
     --1st: #131313;
     --2nd: rgb(224, 222, 222);
+    --3rd:rgb(99, 99, 99);
     --1st-font: 'Jazmin Alt Medium';
     --2nd-font: 'SF Pro REGULAR';
     --3rd-font: 'SF Pro BOLD', sans-serif;
@@ -181,7 +182,7 @@ nav {
 
 }
 
-.title strong {
+strong {
     font-weight: 800;
     font-family: var(--3rd-font);
 }
@@ -218,18 +219,19 @@ nav {
 .menu{
     position: fixed;
     z-index: 100;
-    background: var(--2nd);
+    
     color: var(--1st);
-    height: 50%;
+
     width: 100vw;
-    top: -100%;
+    backdrop-filter: saturate(50%) blur(60px);
 }
+
 .links{
         display: flex
 ;
     flex-direction: column;
     font-size: 7vw;
-
+    padding-bottom: 15vh;
 }
 .no{
     opacity: 0;
@@ -239,11 +241,70 @@ nav {
 }
 .icon{
     font-size: 7vw;
+    display: block;
 }
 .links a{
     padding: 0 10%;
 }
+.close{
+    font-size: 10vw;
+}
+.tag{
+        font-size: 14px;
+    color: var(--3rd);
+    border: 1px solid var(--3rd);
+    padding: 5px;
+    border-radius: 20px;
+}
+.tags{
+        display: flex;
+    gap: 4px;
+}
+.t-cont{
+    display: inline-block;
+}
+.about{
+    height: 100vh;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.large-txt{
+    font-size: 2.2vw;
+}
+.story-txt, .about-txt{
+    width: 60%;
+    text-align: center;
+}
+.pg-name{
+    padding: 8vh 0;
+}
+.about-txt{
+    background: var(--btn);
+    color: var(--2nd);
+    border-radius: var(--radius);
+    padding: 0 24px;
+}
+.story-txt{
+    padding-bottom: 100px;
+}
+.left ,.right{
+  display: inline-block; /* allows transform to work */
+}
+.services{
+    height: 100vh;
+    background: var(--1st);
+}
+
 @media (max-width: 1100px) {
+    .story-txt, .about-txt{
+        width: 80%;
+    }
+    .large-txt {
+        font-size: 3.8vw;
+    }
     .title {
         max-width: 800px;
     }
@@ -256,23 +317,28 @@ nav {
     .logo {
         width: 13vw;
     }
+    .icon-area{
+        display: block;
+    }
+    .nav-links {
+        display: none;
+    }
 }
 
 /* Small screens tweaks */
 @media (max-width: 640px) {
-    .icon-area{
-        display: block;
+    
+    .story-txt, .about-txt{
+        width: 95%;
     }
-    .cta{
-        display: none;
+    .large-txt {
+        font-size: 5.2vw;
     }
     .title {
         font-size: clamp(36px, 6.2vw, 68px);
     }
 
-    .nav-links {
-        display: none;
-    }
+    
 
     .cta {
         padding: 10px 14px;
