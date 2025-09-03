@@ -31,7 +31,7 @@
 :root {
     --1st: #131313;
     --2nd: rgb(224, 222, 222);
-    --3rd: rgb(99, 99, 99);
+    --3rd: rgb(136, 136, 136);
     --1st-font: 'Jazmin Alt Medium';
     --2nd-font: 'SF Pro REGULAR';
     --3rd-font: 'SF Pro BOLD', sans-serif;
@@ -120,8 +120,8 @@ nav {
 }
 
 .nav-links a {
-    opacity: .9;
-    color: var(--1st);
+    opacity: .7;
+    color: var(--2nd);
 }
 
 .nav-links a:hover {
@@ -162,7 +162,7 @@ nav {
 
 /* HERO */
 .hero {
-    padding: 56px 0 32px;
+    padding: 50px 10%;
 }
 
 .eyebrow {
@@ -178,7 +178,7 @@ nav {
 
     letter-spacing: -0.02em;
     max-width: 900px;
-    color: var(--1st);
+    color: var(--2nd);
 
 }
 
@@ -365,11 +365,76 @@ strong {
     transform: translateY(350px);
 }
 
+.home {
+    background: url("WhatsApp Image 2025-09-02 at 09.36.00.jpeg") no-repeat center center/cover;
 
+    height: 100%;
+    width: 100%;
+}
 
+.category {
+    color: rgb(190, 182, 182);
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.752);
+    position: absolute;
+    text-transform: uppercase;
+    font-size: 25px;
+}
 
+.one {
+    left: 10%;
+    bottom: 50%;
+}
 
+.two {
+    left: 43%;
+    bottom: 45%;
+}
+
+.three {
+    right: 12%;
+    bottom: 50%;
+    color: var(--btn);
+    padding: 5px 10px;
+    border-radius: 20px;
+    text-shadow: 2px 2px 10px var(--btn);
+}
+.four{
+    left: 42%;
+    bottom: 5%;
+    
+}
+.five{
+    right: 12%;
+    bottom: 15%;
+    color: var(--btn);
+    padding: 5px 10px;
+    border-radius: 20px;
+    text-shadow: 2px 2px 10px var(--btn);
+}
 @media (max-width: 1100px) {
+    .home {
+        background: url("WhatsApp\ Image\ 2025-09-02\ at\ 10.39.00.jpeg") no-repeat center center/cover;
+    }
+
+    .category {
+        font-size: 2.5vw;
+    }
+
+    /* .one {
+        left: 10%;
+        bottom: 18%;
+    }
+
+    .two {
+        left: 43%;
+        bottom: 35%;
+    }
+
+    .three {
+        right: 15%;
+        bottom: 18%;
+    } */
+
 
     .story-txt,
     .about-txt {
@@ -442,6 +507,33 @@ strong {
 
 /* Small screens tweaks */
 @media (max-width: 640px) {
+    .one {
+        left: 5%;
+        bottom: 55%;
+    }
+
+    .two {
+        left: 40%;
+        bottom: 50%;
+    }
+
+    .three {
+        right: 10%;
+        bottom: 55%;
+        color: rgb(190, 182, 182);
+        text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.752);
+    }
+    .four{
+        left: 40%;
+        bottom: 20%;
+    }
+    .five{
+        right: 10%;
+        bottom: 37%;
+    }
+     .category {
+        font-size: 3vw;
+    }
 
     .story-txt,
     .about-txt {
@@ -453,7 +545,7 @@ strong {
     }
 
     .title {
-        font-size: clamp(36px, 6.2vw, 68px);
+        font-size: 6vw;
     }
 
 
@@ -491,7 +583,8 @@ strong {
         left: 2%;
         transform: translateY(280px);
     }
-    .a-img{
+
+    .a-img {
         width: 70px;
     }
 }
