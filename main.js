@@ -135,7 +135,7 @@ function image(){
           trigger: img,
           start: "top 80%",   // when img enters viewport
           end: "top 50%",     // when img is further in
-        // ties animation to scroll
+       // ties animation to scroll
           // markers: true    // uncomment for debug
         }
       }
