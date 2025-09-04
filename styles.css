@@ -162,7 +162,7 @@ nav {
 
 /* HERO */
 .hero {
-    padding: 50px 10%;
+    padding: 50px 7%;
 }
 
 .eyebrow {
@@ -177,7 +177,7 @@ nav {
     line-height: 1.06;
 
     letter-spacing: -0.02em;
-    max-width: 900px;
+   
     color: var(--2nd);
 
 }
@@ -274,13 +274,11 @@ strong {
 }
 
 .about {
-
     padding: 5vh 24px;
     padding-top: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .large-txt {
@@ -391,7 +389,7 @@ strong {
 }
 
 .three {
-    right: 12%;
+    right: 10%;
     bottom: 50%;
     color: var(--btn);
     padding: 5px 10px;
@@ -414,8 +412,11 @@ strong {
 @media (max-width: 1100px) {
     .home {
         background: url("WhatsApp\ Image\ 2025-09-02\ at\ 10.39.00.jpeg") no-repeat center center/cover;
+       
     }
-
+.hero{
+        padding: 70px 5%;
+    }
     .category {
         font-size: 2.5vw;
     }
@@ -434,7 +435,12 @@ strong {
         right: 15%;
         bottom: 18%;
     } */
-
+     .three{
+        right: 5%;
+     }
+     .five{
+        bottom: 23%;
+     }
 
     .story-txt,
     .about-txt {
@@ -507,6 +513,15 @@ strong {
 
 /* Small screens tweaks */
 @media (max-width: 640px) {
+    .tag{
+        font-size: 10px;
+    }
+    .container {
+        padding: 0 10px;
+    }
+    .hero{
+        padding: 70px 5%;
+    }
     .one {
         left: 5%;
         bottom: 55%;
@@ -529,7 +544,7 @@ strong {
     }
     .five{
         right: 10%;
-        bottom: 37%;
+        bottom: 34%;
     }
      .category {
         font-size: 3vw;
