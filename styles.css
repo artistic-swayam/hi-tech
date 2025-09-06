@@ -82,13 +82,15 @@ a {
     transition: opacity 0.4s ease, transform 0.4s ease;
     opacity: 0;
 }
+
 .nav-wrap.visible {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
+
 nav {
-   
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -271,6 +273,7 @@ strong {
     border: 1px solid var(--3rd);
     padding: 5px;
     border-radius: 20px;
+    display: inline-block;
 }
 
 .tags {
@@ -425,10 +428,10 @@ strong {
 
 .six {
     transform: perspective(100px) rotateY(25deg) rotate(28deg);
-  transform-origin: left center;
+    transform-origin: left center;
     left: 30%;
     bottom: 51%;
-    
+
 }
 
 .a-below {
@@ -441,104 +444,198 @@ strong {
     width: 50%;
     padding: 0 24px;
 }
+
 .a-container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
 
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 50px;
+    font-family: var(--2nd-font);
+}
+
+.about-left {
+    flex: 1;
+    min-width: 280px;
+}
+
+.about-left p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.about-image {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 40%;
+    display: block;
+    border-radius: 10px;
+}
+
+.about-right {
+    flex: 1;
+    min-width: 280px;
+    background: var(--btn);
+    /* blue card */
+    color: var(--2nd);
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.about-right h3 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #93c5fd;
+}
+
+.about-right p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--3rd);
+}
+
+.stat {
+    flex: 1;
+    border-left: 1px solid var(--3rd);
+}
+
+.nb {
+    border-left: none;
+}
+
+.stat h2 {
+    font-size: 24px;
+    margin: 0;
+    color: var(--btn);
+    font-family: var(--3rd-font);
+}
+
+.stat p {
+    font-size: 14px;
+    margin: 5px 0 0;
+    color: #555;
+}
+
+.new-nav {
+    opacity: 1;
+    position: relative;
+}
+
+
+
+
+
+.services {
+    background: var(--btn);
+    height: 150vh;
+    width: 100%;
+    color: var(--2nd);
+    padding: 5vh 24px;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+.cards{
+        display: flex
+;
+    flex-direction: column;
+    width: 100%;
+    gap: 5vh;
+    padding: 5vh 24px;
+}
+.card{
+
+    background: var(--2nd);
+    padding: 0 24px;
+    border-radius: 12px;
+    overflow: hidden;
+        display: flex
+;
+    align-items: flex-start;
+        justify-content: space-between;
+      box-shadow: 0 0 100px #000;
+}
+.card-h1{
+    color: var(--1st);
+    font-family: var(--2nd-font);
+}
+.card-img{
+    background-image: url("fav.PNG");
+    width: 20%;
+}
+.card-details{
+    width: 35%;
+}
+.card-details p{
+    color: var(--1st);
+    
+}
+.about{
+    background-image: 
+    linear-gradient(to right, rgba(128,128,128,0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(128,128,128,0.2) 1px, transparent 1px);
+  background-size: 30px 30px; 
+}
+/* .about {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #21439D,#3b7cff, rgb(224, 222, 222));
+  background-size: 200% 200%;
+  animation: shine 6s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+} */
+
+
+/* Responsive */
+@media (max-width: 768px) {
     .about-section {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      margin-bottom: 50px;
-      font-family: var(--2nd-font);
-    }
-
-    .about-left {
-      flex: 1;
-      min-width: 280px;
-    }
-
-    .about-left p {
-      font-size: 16px;
-      line-height: 1.6;
-    }
-
-    .about-image {
-      margin-top: 20px;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    .about-image img {
-      width: 100%;
-      display: block;
-      border-radius: 10px;
-    }
-
-    .about-right {
-      flex: 1;
-      min-width: 280px;
-      background: var(--btn); /* blue card */
-      color: var(--2nd);
-      padding: 30px;
-      border-radius: 12px;
-    }
-
-    .about-right h3 {
-      font-size: 14px;
-      letter-spacing: 2px;
-      margin-bottom: 15px;
-      color: #93c5fd;
-    }
-
-    .about-right p {
-      font-size: 15px;
-      line-height: 1.6;
+        flex-direction: column;
     }
 
     .stats {
-      display: flex;
-      justify-content: space-around;
-      text-align: center;
-      background: white;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-
-    .stat {
-      flex: 1;
-    }
-
-    .stat h2 {
-      font-size: 24px;
-      margin: 0;
-      color: var(--btn);
-      font-family: var(--3rd-font);
-    }
-
-    .stat p {
-      font-size: 14px;
-      margin: 5px 0 0;
-      color: #555;
-    }
-    .new-nav{
-        opacity: 1;
-        position: relative;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .about-section {
-        flex-direction: column;
-      }
-      .stats {
         gap: 20px;
-      }
     }
+}
+
 @media (max-width: 1100px) {
+    .card{
+        flex-direction: column;
+        
+  
+    }
+    .card-details{
+        width: 100%;
+    }
+    .card-img{
+        width: 40%;
+    }
     .home {
         background: url("WhatsApp\ Image\ 2025-09-02\ at\ 10.39.00.jpeg") no-repeat center center/cover;
 
@@ -573,9 +670,11 @@ strong {
     .five {
         bottom: 23%;
     }
-    .six{
+
+    .six {
         bottom: 50%;
     }
+
     .story-txt,
     .about-txt {
         width: 80%;
@@ -610,7 +709,7 @@ strong {
         display: none;
     }
 
-   
+
 
     /* .a-img {
         width: 110px;
@@ -683,9 +782,10 @@ strong {
         right: 10%;
         bottom: 34%;
     }
-    .six{
+
+    .six {
         left: 25%;
-      
+
     }
 
     .category {
