@@ -176,3 +176,19 @@ about();
 text();
 image();
 
+gsap.registerPlugin(ScrollTrigger);
+
+const cards = gsap.utils.toArray(".cards .card");
+
+cards.forEach((card, i) => {
+  gsap.to(card, {
+    y: -i * 180, // overlap amount (adjust 80px to taste)
+    zIndex: i + 1, // make each next card on top
+    scrollTrigger: {
+      trigger: ".card",
+      start: "top center",
+      end: "+=600",
+      scrub: true,
+    }
+  });
+});
