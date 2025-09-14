@@ -355,6 +355,20 @@ const carousels = {
   //   "url('f3.jpg')",
   //   "url('f38.JPG')"
   // ],
+  wb1: [
+    "url('b1.JPG')",
+    //"url('f38.JPG')"
+  ],
+  wbi1: [
+    "url('bi6.jpg')",
+    "url('bi2.jpg')",
+    "url('bi5.jpg')",
+    //"url('f38.JPG')"
+  ],
+  wbi2: [
+    "url('bi4.jpg')",
+    //"url('f38.JPG')"
+  ],
 };
 
 Object.keys(carousels).forEach(id => {
