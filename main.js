@@ -242,7 +242,7 @@ const carousels = {
   ],
   w4: [
     "url('f5.jpg')",
-    "url('f13.JPG')"
+    "url('f13.jpg')"
   ],
   w5: [
     "url('f6.jpeg')",
@@ -369,6 +369,299 @@ const carousels = {
     "url('bi4.jpg')",
     //"url('f38.JPG')"
   ],
+  wc1: [
+    "url('c1.jpg')",
+    //"url('f2.jpg')",
+
+  ],
+  wc2: [
+    "url('c2.jpg')",
+    "url('c6.jpg')",
+    "url('c19.jpg')"
+  ],
+  wc3: [
+    "url('c3.jpg')",
+    "url('c16.jpg')",
+    //"url('f46.jpg')",
+    // "url('f38.JPG')"
+  ],
+  wc4: [
+    "url('c4.jpg')",
+    //"url('f13.jpg')"
+  ],
+  wc5: [
+    "url('c5.jpg')",
+    //"url('f7.jpeg')",
+    //"url('f39.JPG')",
+    //"url('f54.jpeg')"
+  ],
+  wc6: [
+    "url('c7.jpg)",
+    "url('c28.JPG)",    
+  ],
+  wc7: [
+    "url('c8.jpg')",
+    //"url('f35.JPG')",
+    //"url('f36.JPG')"
+    //"url('f38.JPG')"
+  ],
+   wc8: [
+     "url('c9.jpg')",
+     
+  ],
+  wc9: [
+    "url('c10.jpg')",
+   "url('c20.jpg')"
+    //"url('f47.jpg')"
+  ],
+  wc10: [
+    "url('c11.jpg')",
+    "url('c44.jpeg')",
+    
+  ],
+   wc11: [
+    "url('c12.jpg')",
+    "url('c13.jpg')",
+    "url('c37.jpeg')",
+  ],
+   wc12: [
+    "url('c14.jpg')",
+    "url('c42.jpeg')",
+    "url('c43.jpeg')",
+  ],
+   wc13: [
+    "url('c15.jpg')",
+    //"url('f17.jpeg')"
+  ],
+   wc14: [
+    "url('c35.jpg')",
+    "url('c36.jpg')",
+    "url('c17.jpg')",
+    "url('c27.JPG')",
+    "url('c32.jpg')",
+    "url('c34.jpg')",
+  ],
+   wc15: [
+    "url('c18.jpg')",
+    //"url('f17.jpeg')"
+  ],
+  //  wc16: [
+  //   ,
+  //   //"url('f17.jpeg')"
+  // ],
+   wc17: [
+    "url('c21.jpg')",
+    //"url('f17.jpeg')"
+  ],
+   wc18: [
+    "url('c22.jpg')",
+    //"url('f17.jpeg')"
+  ],
+   wc19: [
+    "url('c23.jpg')",
+    //"url('f17.jpeg')"
+  ],
+   wc20: [
+    "url('c24.jpg')",
+    "url('c25.jpg')"
+  ],
+   wc21: [
+    "url('c31.jpg')",
+    //"url('f17.jpeg')"
+  ],
+   wc22: [
+    "url('c33.jpg')",
+    //"url('f17.jpeg')"
+  ],
+   wc23: [
+    "url('c39.jpeg')",
+    "url('c40.jpeg')",
+    "url('c41.jpeg')",
+  ],
+   wc24: [
+    "url('c45.jpg')",
+    "url('c46.jpg')"
+  ],
+  fl1: [
+    "url('fl1.jpg')",
+    "url('fl8.jpg')"
+  ],
+  fl2: [
+    "url('fl2.jpg')",
+    "url('fl9.jpg')"
+  ],
+  fl3: [
+    "url('fl3.jpg')",
+    "url('fl6.jpg')",
+    "url('fl11.jpg')"
+  ],
+  fl4: [
+    "url('fl7.jpg')",
+    //"url('fl5.jpg')"
+  ],
+  fl5: [
+    "url('fl10.jpg')",
+    
+  ],
+  p1: [
+    "url('p1.jpg')",
+    "url('p26.jpg')",
+    "url('p36.jpg')",
+    "url('p15.jpg')"
+  ],
+  p2: [
+    "url('p2.jpg')",
+    "url('p35.jpg')"
+  ],
+  p3: [
+    "url('p3.jpg')",
+    //"url('fl9.jpg')"
+  ],
+  p4: [
+    "url('p4.jpg')",
+    "url('p22.jpg')",
+    "url('p28.jpg')",
+    "url('p12.jpg')"
+  ],
+  p5: [
+    "url('p5.jpg')",
+    "url('p24.jpg')",
+    "url('p25.jpg')",
+    "url('pl0.jpg')"
+  ],
+  p6: [
+    "url('p6.jpg')",
+    //"url('fl9.jpg')"
+  ],
+  p7: [
+    "url('p7.jpg')",
+    "url('p31.jpg')",
+    "url('p33.jpg')",
+    "url('p30.jpg')",
+    "url('p49.jpg')",
+    "url('p51.jpg')",
+  ],
+  p8: [
+    "url('p8.jpg')",
+    "url('p37.jpg')"
+  ],
+  p9: [
+    "url('p9.jpg')",
+    //"url('fl9.jpg')"
+  ],
+  p10: [
+    "url('p11.jpg')",
+    "url('p59.jpg')"
+  ],
+  p11: [
+    "url('p13.jpg')",
+    //"url('fl9.jpg')"
+  ],
+  p12: [
+    "url('p14.jpg')",
+    //8"url('fl9.jpg')"
+  ],
+  p13: [
+    "url('p16.jpg')",
+  
+  ],
+  p14: [
+    "url('p17.jpg')",
+    
+  ],
+  p15: [
+    "url('p18.jpg')",
+    
+  ],
+  p16: [
+    "url('p19.jpg')",
+    
+  ],
+  p17: [
+    "url('p20.jpg')",
+    //"url('fl9.jpg')"
+  ],
+  p18: [
+    "url('p21.jpg')",
+    //"url('fl9.jpg')"
+  ],
+  p19: [
+    "url('p23.jpg')",
+    "url('p32.jpg')",
+    "url('p46.jpg')"
+  ],
+  p20: [
+    "url('p27.jpg')",
+    "url('p52.jpg')"
+  ],
+  p21: [
+    "url('p29.jpg')",
+    "url('p42.jpg')"
+  ],
+  p22: [
+    "url('p38.jpg')",
+    //"url('fl9.jpg')"
+  ],
+  p23: [
+    "url('p39.jpg')",
+    "url('p62.jpg')"
+  ],
+  p24: [
+    "url('p43.jpg')",
+    "url('p44.jpg')"
+  ],
+  // p25: [
+  //   "url('p38.jpg')",
+  //   //"url('fl9.jpg')"
+  // ],
+  // p26: [
+  //   "url('p38.jpg')",
+  //   //"url('fl9.jpg')"
+  // ],
+  // p27: [
+  //   "url('p38.jpg')",
+  //   //"url('fl9.jpg')"
+  // ],
+  // p28: [
+  //   "url('p38.jpg')",
+  //   //"url('fl9.jpg')"
+  // ],
+  // p29: [
+  //   "url('p38.jpg')",
+  //   //"url('fl9.jpg')"
+  // ],
+  // p30: [
+  //   "url('p38.jpg')",
+  //   //"url('fl9.jpg')"
+  // ],
+  // p31: [
+  //   "url('p38.jpg')",
+  //   //"url('fl9.jpg')"
+  // ],
+  // p32: [
+  //   "url('p38.jpg')",
+  //   //"url('fl9.jpg')"
+  // ],
+  // p33: [
+  //   "url('p38.jpg')",
+  //   //"url('fl9.jpg')"
+  // ],
+  // p34: [
+  //   "url('p38.jpg')",
+  //   //"url('fl9.jpg')"
+  // ],
+  // p35: [
+  //   "url('p38.jpg')",
+  //   //"url('fl9.jpg')"
+  // ],
+  // p36: [
+  //   "url('p38.jpg')",
+  //   //"url('fl9.jpg')"
+  // ],
+  // p37: [
+  //   "url('p38.jpg')",
+  //   //"url('fl9.jpg')"
+  // ],
 };
 
 Object.keys(carousels).forEach(id => {
