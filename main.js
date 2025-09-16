@@ -506,18 +506,19 @@ const carousels = {
   p1: [
     "url('p1.jpg')",
     "url('p26.jpg')",
-    "url('p36.jpg')",
+    "url('p36.jpeg')",
     "url('p15.jpg')"
   ],
   p2: [
     "url('p2.jpg')",
     "url('p35.jpg')"
   ],
-  p3: [
-    "url('p3.jpg')",
-    //"url('fl9.jpg')"
-  ],
+  // p3: [
+    
+  //   //"url('fl9.jpg')"
+  // ],
   p4: [
+    "url('p3.jpg')",
     "url('p4.jpg')",
     "url('p22.jpg')",
     "url('p28.jpg')",
@@ -527,7 +528,7 @@ const carousels = {
     "url('p5.jpg')",
     "url('p24.jpg')",
     "url('p25.jpg')",
-    "url('pl0.jpg')"
+    "url('p10.jpg')"
   ],
   p6: [
     "url('p6.jpg')",
@@ -543,7 +544,7 @@ const carousels = {
   ],
   p8: [
     "url('p8.jpg')",
-    "url('p37.jpg')"
+    "url('p37.jpeg')"
   ],
   p9: [
     "url('p9.jpg')",
@@ -555,6 +556,8 @@ const carousels = {
   ],
   p11: [
     "url('p13.jpg')",
+    "url('p29.jpg')",
+    "url('p42.jpg')"
     //"url('fl9.jpg')"
   ],
   p12: [
@@ -587,19 +590,18 @@ const carousels = {
   ],
   p19: [
     "url('p23.jpg')",
-    "url('p32.jpg')",
-    "url('p46.jpg')"
+    "url('p32.jpeg')",
+    "url('p46.jpeg')"
   ],
   p20: [
     "url('p27.jpg')",
-    "url('p52.jpg')"
+    //"url('p52.jpg')"
   ],
-  p21: [
-    "url('p29.jpg')",
-    "url('p42.jpg')"
-  ],
+  // p21: [
+    
+  // ],
   p22: [
-    "url('p38.jpg')",
+    "url('p38.jpeg')",
     //"url('fl9.jpg')"
   ],
   p23: [
@@ -607,8 +609,8 @@ const carousels = {
     "url('p62.jpg')"
   ],
   p24: [
-    "url('p43.jpg')",
-    "url('p44.jpg')"
+    "url('p43.jpeg')",
+    "url('p44.jpeg')"
   ],
   // p25: [
   //   "url('p38.jpg')",
@@ -662,6 +664,17 @@ const carousels = {
   //   "url('p38.jpg')",
   //   //"url('fl9.jpg')"
   // ],
+  s1: [
+    "url('s1.jpg')",
+  ],
+  s2: [
+    "url('s2.jpeg')",
+  ],
+  wu1: [
+    "url('w1.jpg')",
+    "url('w2.jpg')",
+    "url('w3.JPG')",
+  ],
 };
 
 Object.keys(carousels).forEach(id => {
@@ -672,4 +685,23 @@ Object.keys(carousels).forEach(id => {
     div.style.backgroundImage = carousels[id][i];
     i = (i + 1) % carousels[id].length;
   }, 3000); // every 3 sec
+});
+const categories = document.querySelectorAll(".w-categories span");
+const grids = document.querySelectorAll(".work-container > div");
+
+categories.forEach(btn => {
+  btn.addEventListener("click", () => {
+    let target = btn.getAttribute("data-target");
+
+    // hide all
+    grids.forEach(grid => grid.classList.add("none"));
+
+    // show clicked one
+    document.querySelector("." + target).classList.remove("none");
+
+    categories.forEach(cat => cat.classList.remove("active"));
+
+    // add active to clicked button
+    btn.classList.add("active");
+  });
 });
