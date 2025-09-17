@@ -2,18 +2,18 @@
 
 function menu() {
   document.addEventListener("DOMContentLoaded", () => {
-  const navs = document.querySelectorAll(".nav-wrap");
-  const nav = navs[navs.length - 1]; // last nav only
+    const navs = document.querySelectorAll(".nav-wrap");
+    const nav = navs[navs.length - 1]; // last nav only
 
-  // don’t set display, just toggle the class
-  window.addEventListener("scroll", () => {
-    if (window.scrollY >= window.innerHeight) {
-      nav.classList.add("visible");
-    } else {
-      nav.classList.remove("visible");
-    }
+    // don’t set display, just toggle the class
+    window.addEventListener("scroll", () => {
+      if (window.scrollY >= window.innerHeight) {
+        nav.classList.add("visible");
+      } else {
+        nav.classList.remove("visible");
+      }
+    });
   });
-});
 
 
   const openBtn = document.querySelector(".open");
@@ -24,7 +24,7 @@ function menu() {
   openBtn.addEventListener("click", () => {
     menu.style.display = "block";
     nav.style.display = "none";
-   // show it first
+    // show it first
     gsap.fromTo(menu,
       { y: "-100%" },
       { y: "0%", duration: .6, ease: "power3.out" }
@@ -41,7 +41,7 @@ function menu() {
 
   // CLOSE
   closeBtn.addEventListener("click", () => {
- nav.style.display = "block";
+    nav.style.display = "block";
     gsap.to(menu, {
       y: "-100%",
 
@@ -100,38 +100,38 @@ function text() {
 
   gsap.registerPlugin(SplitText)
   let split = SplitText.create(".split", {
-  type: "words, lines",
-  mask: "lines",
-  linesClass: "line++"
-});
-
-gsap.from(split.lines, {
-  duration: 1.2,
-  y: 100,
-  opacity: 0,
-  stagger: 0.05
-});
-
-// All the other split texts (scroll based)
-document.querySelectorAll(".split-others").forEach(el => {
-  let split_others = SplitText.create(el, {
     type: "words, lines",
     mask: "lines",
     linesClass: "line++"
   });
 
-  gsap.from(split_others.lines, {
-    duration: 1,
+  gsap.from(split.lines, {
+    duration: 1.2,
     y: 100,
     opacity: 0,
-    stagger: 0.08,
-    scrollTrigger: {
-      trigger: el, // use the individual element
-      start: "top 80%",
-      toggleActions: "play reverse play reverse"
-    }
+    stagger: 0.05
   });
-});
+
+  // All the other split texts (scroll based)
+  document.querySelectorAll(".split-others").forEach(el => {
+    let split_others = SplitText.create(el, {
+      type: "words, lines",
+      mask: "lines",
+      linesClass: "line++"
+    });
+
+    gsap.from(split_others.lines, {
+      duration: 1,
+      y: 100,
+      opacity: 0,
+      stagger: 0.08,
+      scrollTrigger: {
+        trigger: el, // use the individual element
+        start: "top 80%",
+        toggleActions: "play reverse play reverse"
+      }
+    });
+  });
 
 
 }
@@ -170,24 +170,24 @@ function lenis() {
   requestAnimationFrame(raf);
 }
 
-function show(){
-const btn = document.querySelector(".show-toggle");
-const works = document.querySelectorAll(".w");
-const workSection = document.querySelector(".work");
+function show() {
+  const btn = document.querySelector(".show-toggle");
+  const works = document.querySelectorAll(".w");
+  const workSection = document.querySelector(".work");
 
-btn.addEventListener("click", () => {
-  const isHidden = works[0].classList.contains("no-w");
+  btn.addEventListener("click", () => {
+    const isHidden = works[0].classList.contains("no-w");
 
-  works.forEach(w => {
-    w.classList.toggle("no-w", !isHidden);
+    works.forEach(w => {
+      w.classList.toggle("no-w", !isHidden);
+    });
+
+    // toggle the whole .work height
+    workSection.classList.toggle("expanded", isHidden);
+
+    // update button text
+    btn.textContent = isHidden ? "Show Less" : "Show More";
   });
-
-  // toggle the whole .work height
-  workSection.classList.toggle("expanded", isHidden);
-
-  // update button text
-  btn.textContent = isHidden ? "Show Less" : "Show More";
-});
 
 }
 
@@ -203,20 +203,20 @@ gsap.registerPlugin(ScrollTrigger);
 
 const cards = gsap.utils.toArray(".card");
 
-cards.forEach((card,i)=>{
-  gsap.to(card,{
-    scale: 0.8+0.2*(i/(cards.length-1)),
-    ease:"none",
+cards.forEach((card, i) => {
+  gsap.to(card, {
+    scale: 0.8 + 0.2 * (i / (cards.length - 1)),
+    ease: "none",
 
-    scrollTrigger:{
-      trigger:card,
-      start:"-50%",
-      end:"bottom center",
-      endTrigger:".cards",
-      scrub:true,
-      pin:card,
-      pinSpacing:false,
-      invalidateOnRefresh:true,
+    scrollTrigger: {
+      trigger: card,
+      start: "-50%",
+      end: "bottom center",
+      endTrigger: ".cards",
+      scrub: true,
+      pin: card,
+      pinSpacing: false,
+      invalidateOnRefresh: true,
 
     }
   })
@@ -299,43 +299,43 @@ const carousels = {
     "url('f32.JPG')",
     //"url('f38.JPG')"
   ],
-   w16: [
+  w16: [
     "url('f33.JPG')",
     "url('f44.jpg')"
   ],
-   w17: [
+  w17: [
     "url('f34.JPG')",
     //"url('f38.JPG')"
   ],
-   w18: [
+  w18: [
     //"url('f3.jpg')",
     "url('f48.jpg')"
   ],
   //  w19: [
-    
+
   // ],
-   w20: [
+  w20: [
     "url('f27.jpg')",
     "url('f28.jpg')",
     "url('f41.jpg')",
   ],
   //  w21: [
-    
-    
+
+
   // ],
-   w22: [
+  w22: [
     //"url('f3.jpg')",
     "url('f49.jpg')"
   ],
-   w23: [
+  w23: [
     "url('f50.jpeg')",
     //"url('f38.JPG')"
   ],
-   w24: [
+  w24: [
     "url('f55.jpeg')",
 
   ],
-   w25: [
+  w25: [
     "url('f57.jpg')",
     //"url('f38.JPG')"
   ],
@@ -397,7 +397,7 @@ const carousels = {
   ],
   wc6: [
     "url('c7.jpg)",
-    "url('c28.JPG)",    
+    "url('c28.JPG)",
   ],
   wc7: [
     "url('c8.jpg')",
@@ -405,35 +405,35 @@ const carousels = {
     //"url('f36.JPG')"
     //"url('f38.JPG')"
   ],
-   wc8: [
-     "url('c9.jpg')",
-     
+  wc8: [
+    "url('c9.jpg')",
+
   ],
   wc9: [
     "url('c10.jpg')",
-   "url('c20.jpg')"
+    "url('c20.jpg')"
     //"url('f47.jpg')"
   ],
   wc10: [
     "url('c11.jpg')",
     "url('c44.jpeg')",
-    
+
   ],
-   wc11: [
+  wc11: [
     "url('c12.jpg')",
     "url('c13.jpg')",
     "url('c37.jpeg')",
   ],
-   wc12: [
+  wc12: [
     "url('c14.jpg')",
     "url('c42.jpeg')",
     "url('c43.jpeg')",
   ],
-   wc13: [
+  wc13: [
     "url('c15.jpg')",
     //"url('f17.jpeg')"
   ],
-   wc14: [
+  wc14: [
     "url('c35.jpg')",
     "url('c36.jpg')",
     "url('c17.jpg')",
@@ -441,7 +441,7 @@ const carousels = {
     "url('c32.jpg')",
     "url('c34.jpg')",
   ],
-   wc15: [
+  wc15: [
     "url('c18.jpg')",
     //"url('f17.jpeg')"
   ],
@@ -449,36 +449,36 @@ const carousels = {
   //   ,
   //   //"url('f17.jpeg')"
   // ],
-   wc17: [
+  wc17: [
     "url('c21.jpg')",
     //"url('f17.jpeg')"
   ],
-   wc18: [
+  wc18: [
     "url('c22.jpg')",
     //"url('f17.jpeg')"
   ],
-   wc19: [
+  wc19: [
     "url('c23.jpg')",
     //"url('f17.jpeg')"
   ],
-   wc20: [
+  wc20: [
     "url('c24.jpg')",
     "url('c25.jpg')"
   ],
-   wc21: [
+  wc21: [
     "url('c31.jpg')",
     //"url('f17.jpeg')"
   ],
-   wc22: [
+  wc22: [
     "url('c33.jpg')",
     //"url('f17.jpeg')"
   ],
-   wc23: [
+  wc23: [
     "url('c39.jpeg')",
     "url('c40.jpeg')",
     "url('c41.jpeg')",
   ],
-   wc24: [
+  wc24: [
     "url('c45.jpg')",
     "url('c46.jpg')"
   ],
@@ -501,7 +501,7 @@ const carousels = {
   ],
   fl5: [
     "url('fl10.jpg')",
-    
+
   ],
   p1: [
     "url('p1.jpg')",
@@ -514,7 +514,7 @@ const carousels = {
     "url('p35.jpg')"
   ],
   // p3: [
-    
+
   //   //"url('fl9.jpg')"
   // ],
   p4: [
@@ -566,19 +566,19 @@ const carousels = {
   ],
   p13: [
     "url('p16.jpg')",
-  
+
   ],
   p14: [
     "url('p17.jpg')",
-    
+
   ],
   p15: [
     "url('p18.jpg')",
-    
+
   ],
   p16: [
     "url('p19.jpg')",
-    
+
   ],
   p17: [
     "url('p20.jpg')",
@@ -598,7 +598,7 @@ const carousels = {
     //"url('p52.jpg')"
   ],
   // p21: [
-    
+
   // ],
   p22: [
     "url('p38.jpeg')",
@@ -677,33 +677,84 @@ const carousels = {
   ],
 };
 
-Object.keys(carousels).forEach(id => { 
-  const div = document.getElementById(id);
-  let i = 0;
+document.addEventListener('DOMContentLoaded', () => {
+  const wrapUrl = s => (typeof s === 'string' && s.trim().startsWith('url(')) ? s : `url("${s}")`;
 
-  setInterval(() => {
-    div.style.backgroundImage = carousels[id][i];
-    i = (i + 1) % carousels[id].length;
-  }, 3000); // every 3 sec
-});
+  Object.keys(carousels).forEach(id => {
+    const container = document.getElementById(id);
+    if (!container) {
+      console.warn(`Carousel container not found: "${id}"`);
+      return;
+    }
 
+    const imgs = carousels[id];
+    if (!Array.isArray(imgs) || imgs.length === 0) {
+      console.warn(`No images for carousel "${id}"`);
+      return;
+    }
 
-const categories = document.querySelectorAll(".w-categories span");
-const grids = document.querySelectorAll(".work-container > div");
+    // make sure container can stack children
+    container.style.position = container.style.position || 'relative';
+    container.style.overflow = 'hidden';
 
-categories.forEach(btn => {
-  btn.addEventListener("click", () => {
-    let target = btn.getAttribute("data-target");
+    // create two crossfade layers
+    const layerA = document.createElement('div');
+    const layerB = document.createElement('div');
+    [layerA, layerB].forEach(layer => {
+      Object.assign(layer.style, {
+        position: 'absolute',
+        inset: '0',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        transition: 'opacity 600ms ease',
+        willChange: 'opacity',
+        opacity: '0'
+      });
+      container.appendChild(layer);
+    });
 
-    // hide all
-    grids.forEach(grid => grid.classList.add("none"));
+    // preload next images (optional but smooth)
+    imgs.forEach(src => { const img = new Image(); img.src = src; });
 
-    // show clicked one
-    document.querySelector("." + target).classList.remove("none");
+    let i = 0;
+    layerA.style.backgroundImage = wrapUrl(imgs[0]);
+    layerA.style.opacity = '1';
+    let visible = layerA;
+    let hidden = layerB;
 
-    categories.forEach(cat => cat.classList.remove("active"));
+    setInterval(() => {
+      const nextIndex = (i + 1) % imgs.length;
+      hidden.style.backgroundImage = wrapUrl(imgs[nextIndex]);
+      // fade-in hidden while fading out visible
+      hidden.style.opacity = '1';
+      visible.style.opacity = '0';
 
-    // add active to clicked button
-    btn.classList.add("active");
+      // swap refs
+      [visible, hidden] = [hidden, visible];
+      i = nextIndex;
+    }, 3000);
   });
 });
+
+
+
+
+  const categories = document.querySelectorAll(".w-categories span");
+  const grids = document.querySelectorAll(".work-container > div");
+
+  categories.forEach(btn => {
+    btn.addEventListener("click", () => {
+      let target = btn.getAttribute("data-target");
+
+      // hide all
+      grids.forEach(grid => grid.classList.add("none"));
+
+      // show clicked one
+      document.querySelector("." + target).classList.remove("none");
+
+      categories.forEach(cat => cat.classList.remove("active"));
+
+      // add active to clicked button
+      btn.classList.add("active");
+    });
+  });
