@@ -1132,7 +1132,7 @@ a:hover {
 
 @media (max-width: 1100px) {
     .services {
-        
+        height: 350vh;
     }
 
     .about-right p {
