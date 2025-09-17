@@ -671,8 +671,8 @@ const carousels = {
     "url('s2.jpeg')",
   ],
   wu1: [
-    "url('w1.jpg')",
-    "url('w2.jpg')",
+    // "url('w1.jpg')",
+    // "url('w2.jpg')",
     "url('w3.JPG')",
   ],
 };
