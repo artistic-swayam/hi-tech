@@ -1137,18 +1137,13 @@ a:hover {
 
     }
 
-    .card {
-        
-
-
-    }
-
+    
     .card-details {
         width: 100%;
     }
 
     .card-img {
-        width: 30%;
+        width: 50%;
     }
 
     .home {
@@ -1264,6 +1259,7 @@ a:hover {
     }
     .card{
         align-items: center;
+        flex-direction: column;
     }
     .card-details p{
         font-size: 3vw;
