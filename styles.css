@@ -950,7 +950,7 @@ a:hover {
   content: "";
   position: absolute;
   top: 0;
-  width: 80px; /* how wide the fade is */
+  width: 30px; /* how wide the fade is */
   height: 100%;
   z-index: 2;
   pointer-events: none; /* so clicks pass through */
