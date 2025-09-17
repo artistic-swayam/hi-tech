@@ -677,7 +677,7 @@ const carousels = {
   ],
 };
 
-Object.keys(carousels).forEach(id => {
+Object.keys(carousels).forEach(id => { 
   const div = document.getElementById(id);
   let i = 0;
 
@@ -686,6 +686,8 @@ Object.keys(carousels).forEach(id => {
     i = (i + 1) % carousels[id].length;
   }, 3000); // every 3 sec
 });
+
+
 const categories = document.querySelectorAll(".w-categories span");
 const grids = document.querySelectorAll(".work-container > div");
 
