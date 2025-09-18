@@ -133,6 +133,8 @@ nav {
 .nav-links a {
     opacity: .7;
     color: var(--1st);
+    filter: drop-shadow(2px 4px 6px black);
+    font-size: 15px;
 }
 
 .nav-links a:hover {
@@ -261,6 +263,7 @@ strong {
 
 .links a {
     padding: 0 10%;
+    color: var(--2nd);
 }
 
 .close {
@@ -921,7 +924,7 @@ a:hover {
     width: 100%;
     padding: 30px 20px;
     background: #fff;
-    max-width: 1200px;
+    
     border-radius: 16px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     }
@@ -995,6 +998,10 @@ a:hover {
      .open{
         display: none;
      }
+     .stats{
+        box-shadow: 0 0 40px #000;
+     }
+     
     @keyframes scroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
