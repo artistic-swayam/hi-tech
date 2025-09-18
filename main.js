@@ -606,7 +606,7 @@ const carousels = {
   ],
   p23: [
     "url('p39.jpg')",
-    "url('p62.jpg')"
+    "url('p62.JPG')"
   ],
   p24: [
     "url('p43.jpeg')",
