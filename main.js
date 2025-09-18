@@ -484,7 +484,7 @@ const carousels = {
   ],
   fl1: [
     "url('fl1.jpg')",
-    "url('fl8.jpg')"
+    "url('fl8.JPG')"
   ],
   fl2: [
     "url('fl2.jpg')",
@@ -493,10 +493,10 @@ const carousels = {
   fl3: [
     "url('fl3.jpg')",
     "url('fl6.jpg')",
-    "url('fl11.jpg')"
+    //"url('fl11.jpg')"
   ],
   fl4: [
-    "url('fl7.jpg')",
+    "url('fl7.JPG')",
     //"url('fl5.jpg')"
   ],
   fl5: [
