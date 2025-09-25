@@ -1029,7 +1029,7 @@ a:hover {
      }
      .p-card{
         position: absolute;
-        width: 500px;
+        width: 300px;
         height: 550px;
         top: 50%;
         left: 50%;
@@ -1039,6 +1039,7 @@ a:hover {
         flex-direction: column;
         gap: 1em;
         will-change: transform;
+        z-index: 100;
      }
      .p-card-img{
         flex: 1;
@@ -1046,9 +1047,16 @@ a:hover {
         overflow: hidden;
     
      }
-     .card-content{
+     .p-card-img img{
         width: 100%;
-        height: 60px;
+        height: 100%;
+        object-fit: cover;
+    }
+     .p-card-content{
+        border-radius: 0.5em;
+    background: var(--btn);
+    color: var(--2nd);
+    padding: 0 20px;
      }
      .card-content p{
         text-align: left;
@@ -1059,25 +1067,36 @@ a:hover {
      }
      .step-counter{
         position: absolute;
+        top: 150px;
         display: flex;
         flex-direction: column;
-        margin: 2em;
+        
      }
      .counter-title, .count{
         position: relative;
         width: 1200px;
-        height: 150px;
+        /* height: 150px; */
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
         overflow: hidden;
      }
+     .counter-title{
+        position: absolute;
+    height: 60px;
+    background: var(--2nd);
+    z-index: 10;
+    width: 100vw;
+    padding: 0 2em;
+     }
      .count{
-        top: -10px;
+        top: 10px;
+        height: 400px;
+        padding: 0 2em;
+        /* transform: translateY(-100px); */
      }
      .count-container{
         position: relative;
-        transform: translateY(150px);
+        /* transform: translateY(150px); */
         will-change: transform;
-
 
      }
      .step-counter h1{
@@ -1086,7 +1105,7 @@ a:hover {
         color: var(--1st);
         text-transform: uppercase;
         font-weight: 900;
-        font-size: 150px;
+        font-size: 150px; 
         line-height: 1;
         letter-spacing: -0.04em;
         will-change: transform;
@@ -1095,9 +1114,21 @@ a:hover {
      .empty{
         opacity: 0;
      }
+     .steps{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+     }
+     .counter-title h2{
+            border-radius: 20px;
+    border: 2px solid var(--1st);
+    padding: 0 5px;
+    width: fit-content;
+     }
      @media (max-width:900px) {
         .counter-title{
-            /* height: 30px; */
+            /* height: 30px;  */
 
         }
         .counter-title h1{
@@ -1113,8 +1144,11 @@ a:hover {
             top: 27.5%;
         }
         .p-card{
-            width:375px;
+            width:350px;
             height: 500px;
+        }
+        .step-counter h1{
+            font-size: 120px;
         }
      }
 
