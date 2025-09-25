@@ -202,7 +202,7 @@ function card(){
   
 
   const stickySection = document.querySelector(".steps");
-  const stickyHeight = window.innerHeight * 7;
+  const stickyHeight = window.innerHeight * 2;
   const cards = document.querySelectorAll(".p-card");
   const countContainer = document.querySelector(".count-container");
   const totalCards = cards.length;
@@ -228,7 +228,7 @@ function card(){
 
   function positionCards(progress = 0){
     const radius = getRadius();
-    const totalTravel = 1+totalCards / 7.5;
+    const totalTravel = 1 + totalCards / 7.5;
     const adjustedProgress = (progress * totalTravel -1)*0.75;
 
     cards.forEach((card,i)=>{
@@ -262,16 +262,16 @@ function card(){
     entries.forEach((entry)=>{
       if(entry.isIntersecting){
         lastScrollY = window.scrollY;
-        let cardndex = Array.from(cards).indexOf(entry.target);
-        currentCardIndex = currentCardIndex;
+        let cardIndex = Array.from(cards).indexOf(entry.target);
+        currentCardIndex = cardIndex;
 
-        const targetY = 150 - currentCardIndex*150;
+        const targetY = 150 - currentCardIndex*300;
         gsap.to(countContainer,{
           y:targetY,
           duration:0.3,
           ease: "power1.out",
           overwrite:true,
-
+          
         });
       }
     });
@@ -281,7 +281,10 @@ function card(){
   });
 
   window.addEventListener("resize", ()=> positionCards(0));
-  });
+
+});
+
+
 }
 lenis();
 menu();
@@ -319,38 +322,38 @@ cards.forEach((card, i) => {
 
 const carousels = {
   w1: [
-    "url('f1.jpg')",
-    "url('f2.jpg')",
+    "f1.jpg",
+    "f2.jpg",
 
   ],
   w2: [
-    "url('f3.jpg')",
-    "url('f38.JPG')"
+    "f3.jpg",
+    "f38.JPG"
   ],
   w3: [
-    "url('f4.JPG')",
-    "url('f45.jpg')",
-    "url('f46.jpg')",
+    "f4.JPG",
+    "f45.jpg",
+    "f46.jpg",
     // "url('f38.JPG')"
   ],
   w4: [
-    "url('f5.jpg')",
-    "url('f13.jpg')"
+    'f5.jpg',
+    'f13.jpg'
   ],
   w5: [
-    "url('f6.jpeg')",
-    "url('f7.jpeg')",
-    "url('f39.JPG')",
-    "url('f54.jpeg')"
+    'f6.jpeg',
+    'f7.jpeg',
+    'f39.JPG',
+    'f54.jpeg'
   ],
   w6: [
-    "url('f40.JPG)",
+    'f40.JPG',
 
   ],
   w7: [
-    "url('f12.jpg')",
-    "url('f35.JPG')",
-    "url('f36.JPG')"
+    'f12.jpg',
+    'f35.JPG',
+    'f36.JPG'
     //"url('f38.JPG')"
   ],
   // w8: [
@@ -358,59 +361,59 @@ const carousels = {
   //   //"url('f38.JPG')"
   // ],
   w9: [
-    "url('f14.jpeg')",
-    "url('f15.jpeg')",
-    "url('f47.jpg')"
+    'f14.jpeg',
+    'f15.jpeg',
+    'f47.jpg'
   ],
   w10: [
-    "url('f16.jpeg')",
-    "url('f17.jpeg')"
+    'f16.jpeg',
+    'f17.jpeg'
   ],
   w11: [
-    "url('f18.jpg')",
-    "url('f19.jpg')"
+    'f18.jpg',
+    'f19.jpg'
   ],
   w12: [
-    "url('f20.jpg')",
-    "url('f21.jpg')",
-    "url('f22.jpg')",
-    "url('f23.jpg')",
-    "url('f24.jpg')",
-    "url('f25.jpg')",
+    'f20.jpg',
+    'f21.jpg',
+    'f22.jpg',
+    'f23.jpg',
+    'f24.jpg',
+    'f25.jpg',
   ],
   w13: [
-    "url('f26.jpg')",
-    "url('f31.JPG')"
+    'f26.jpg',
+    'f31.JPG'
   ],
   w14: [
-    "url('f29.JPG')",
-    "url('f30.JPG')",
-    "url('f42.jpg')",
-    "url('f43.jpg')",
+    'f29.JPG',
+    'f30.JPG',
+    'f42.jpg',
+    'f43.jpg',
   ],
   w15: [
-    "url('f32.JPG')",
+    'f32.JPG',
     //"url('f38.JPG')"
   ],
   w16: [
-    "url('f33.JPG')",
-    "url('f44.jpg')"
+    'f33.JPG',
+    'f44.jpg'
   ],
   w17: [
-    "url('f34.JPG')",
+    'f34.JPG',
     //"url('f38.JPG')"
   ],
   w18: [
     //"url('f3.jpg')",
-    "url('f48.jpg')"
+    'f48.jpg'
   ],
   //  w19: [
 
   // ],
   w20: [
-    "url('f27.jpg')",
-    "url('f28.jpg')",
-    "url('f41.jpg')",
+    'f27.jpg',
+    'f28.jpg',
+    'f41.jpg',
   ],
   //  w21: [
 
@@ -418,18 +421,18 @@ const carousels = {
   // ],
   w22: [
     //"url('f3.jpg')",
-    "url('f49.jpg')"
+    'f49.jpg'
   ],
   w23: [
-    "url('f50.jpeg')",
+    'f50.jpeg',
     //"url('f38.JPG')"
   ],
   w24: [
-    "url('f55.jpeg')",
+    'f55.jpeg',
 
   ],
   w25: [
-    "url('f57.jpg')",
+    'f57.jpg',
     //"url('f38.JPG')"
   ],
   //  w26: [
@@ -449,93 +452,93 @@ const carousels = {
   //   "url('f38.JPG')"
   // ],
   wb1: [
-    "url('b1.JPG')",
+    'b1.JPG',
     //"url('f38.JPG')"
   ],
   wbi1: [
-    "url('bi6.jpg')",
-    "url('bi2.jpg')",
-    "url('bi5.jpg')",
+    'bi6.jpg',
+    'bi2.jpg',
+    'bi5.jpg',
     //"url('f38.JPG')"
   ],
   wbi2: [
-    "url('bi4.jpg')",
+    'bi4.jpg',
     //"url('f38.JPG')"
   ],
   wc1: [
-    "url('c1.jpg')",
+    'c1.jpg',
     //"url('f2.jpg')",
 
   ],
   wc2: [
-    "url('c2.jpg')",
-    "url('c6.jpg')",
-    "url('c19.jpg')"
+    'c2.jpg',
+    'c6.jpg',
+    'c19.jpg'
   ],
   wc3: [
-    "url('c3.jpg')",
-    "url('c16.jpg')",
+    'c3.jpg',
+    'c16.jpg',
     //"url('f46.jpg')",
     // "url('f38.JPG')"
   ],
   wc4: [
-    "url('c4.jpg')",
+    'c4.jpg',
     //"url('f13.jpg')"
   ],
   wc5: [
-    "url('c5.jpg')",
+    'c5.jpg',
     //"url('f7.jpeg')",
     //"url('f39.JPG')",
     //"url('f54.jpeg')"
   ],
   wc6: [
-    "url('c7.jpg)",
-    "url('c28.JPG)",
+    'c7.jpg',
+    'c28.JPG',
   ],
   wc7: [
-    "url('c8.jpg')",
+    'c8.jpg',
     //"url('f35.JPG')",
     //"url('f36.JPG')"
     //"url('f38.JPG')"
   ],
   wc8: [
-    "url('c9.jpg')",
+    'c9.jpg',
 
   ],
   wc9: [
-    "url('c10.jpg')",
-    "url('c20.jpg')"
+    'c10.jpg',
+    'c20.jpg'
     //"url('f47.jpg')"
   ],
   wc10: [
-    "url('c11.jpg')",
-    "url('c44.jpeg')",
+    'c11.jpg',
+    'c44.jpeg',
 
   ],
   wc11: [
-    "url('c12.jpg')",
-    "url('c13.jpg')",
-    "url('c37.jpeg')",
+    'c12.jpg',
+    'c13.jpg',
+    'c37.jpeg',
   ],
   wc12: [
-    "url('c14.jpg')",
-    "url('c42.jpeg')",
-    "url('c43.jpeg')",
+    'c14.jpg',
+    'c42.jpeg',
+    'c43.jpeg',
   ],
   wc13: [
-    "url('c15.jpg')",
+    'c15.jpg',
     //"url('f17.jpeg')"
   ],
   wc14: [
-    "url('c35.jpg')",
-    "url('c36.jpg')",
-    "url('c17.jpg')",
-    "url('c27.JPG')",
-    "url('c32.jpg')",
-    "url('c34.jpg')",
+    'c35.jpg',
+    'c36.jpg',
+    'c17.jpg',
+    'c27.JPG',
+    'c32.jpg',
+    'c34.jpg',
   ],
   wc15: [
-    "url('c18.jpg')",
+    'c18.jpg',
     //"url('f17.jpeg')"
   ],
   //  wc16: [
@@ -543,167 +546,167 @@ const carousels = {
   //   //"url('f17.jpeg')"
   // ],
   wc17: [
-    "url('c21.jpg')",
+    'c21.jpg',
     //"url('f17.jpeg')"
   ],
   wc18: [
-    "url('c22.jpg')",
+    'c22.jpg',
     //"url('f17.jpeg')"
   ],
   wc19: [
-    "url('c23.jpg')",
+    'c23.jpg',
     //"url('f17.jpeg')"
   ],
   wc20: [
-    "url('c24.jpg')",
-    "url('c25.jpg')"
+    'c24.jpg',
+    'c25.jpg'
   ],
   wc21: [
-    "url('c31.jpg')",
+    'c31.jpg',
     //"url('f17.jpeg')"
   ],
   wc22: [
-    "url('c33.jpg')",
+    'c33.jpg',
     //"url('f17.jpeg')"
   ],
   wc23: [
-    "url('c39.jpeg')",
-    "url('c40.jpeg')",
-    "url('c41.jpeg')",
+   'c39.jpeg',
+    'c40.jpeg',
+    'c41.jpeg',
   ],
   wc24: [
-    "url('c45.jpg')",
-    "url('c46.jpg')"
+    'c45.jpg',
+    'c46.jpg'
   ],
   fl1: [
-    "url('fl1.jpg')",
-    "url('fl8.JPG')"
+    'fl1.jpg',
+    'fl8.JPG'
   ],
   fl2: [
-    "url('fl2.jpg')",
-    "url('fl9.jpg')"
+    'fl2.jpg',
+    'fl9.jpg'
   ],
   fl3: [
-    "url('fl3.jpg')",
-    "url('fl6.JPG')",
+    'fl3.jpg',
+    'fl6.JPG',
     //"url('fl11.jpg')"
   ],
   fl4: [
-    "url('fl7.JPG')",
+    'fl7.JPG',
     //"url('fl5.jpg')"
   ],
   fl5: [
-    "url('fl10.jpg')",
+    'fl10.jpg',
 
   ],
   p1: [
-    "url('p1.jpg')",
-    "url('p26.jpg')",
-    "url('p36.jpeg')",
-    "url('p15.jpg')"
+    'p1.jpg',
+   'p26.jpg',
+    'p36.jpeg',
+    'p15.jpg'
   ],
   p2: [
-    "url('p2.jpg')",
-    "url('p35.jpg')"
+    'p2.jpg',
+    'p35.jpg'
   ],
   // p3: [
 
   //   //"url('fl9.jpg')"
   // ],
   p4: [
-    "url('p3.jpg')",
-    "url('p4.jpg')",
-    "url('p22.jpg')",
-    "url('p28.jpg')",
-    "url('p12.jpg')"
+    'p3.jpg',
+    'p4.jpg',
+    'p22.jpg',
+    'p28.jpg',
+    'p12.jpg'
   ],
   p5: [
-    "url('p5.jpg')",
-    "url('p24.jpg')",
-    "url('p25.jpg')",
-    "url('p10.jpg')"
+    'p5.jpg',
+    'p24.jpg',
+    'p25.jpg',
+    'p10.jpg'
   ],
   p6: [
-    "url('p6.jpg')",
+    'p6.jpg',
     //"url('fl9.jpg')"
   ],
   p7: [
-    "url('p7.jpg')",
-    "url('p31.jpg')",
-    "url('p33.jpg')",
-    "url('p30.jpg')",
-    "url('p49.jpg')",
-    "url('p51.jpg')",
+    'p7.jpg',
+    'p31.jpg',
+    'p33.jpg',
+    'p30.jpg',
+    'p49.jpg',
+    'p51.jpg',
   ],
   p8: [
-    "url('p8.jpg')",
-    "url('p37.jpeg')"
+    'p8.jpg',
+    'p37.jpeg'
   ],
   p9: [
-    "url('p9.jpg')",
+    'p9.jpg',
     //"url('fl9.jpg')"
   ],
   p10: [
-    "url('p11.jpg')",
-    "url('p59.jpg')"
+    'p11.jpg',
+    'p59.jpg'
   ],
   p11: [
-    "url('p13.jpg')",
-    "url('p29.jpg')",
-    "url('p42.jpg')"
+    'p13.jpg',
+    'p29.jpg',
+    'p42.jpg'
     //"url('fl9.jpg')"
   ],
   p12: [
-    "url('p14.jpg')",
+    'p14.jpg',
     //8"url('fl9.jpg')"
   ],
   p13: [
-    "url('p16.jpg')",
+    'p16.jpg',
 
   ],
   p14: [
-    "url('p17.jpg')",
+    'p17.jpg',
 
   ],
   p15: [
-    "url('p18.jpg')",
+    'p18.jpg',
 
   ],
   p16: [
-    "url('p19.jpg')",
+    'p19.jpg',
 
   ],
   p17: [
-    "url('p20.jpg')",
+    'p20.jpg',
     //"url('fl9.jpg')"
   ],
   p18: [
-    "url('p21.jpg')",
+    'p21.jpg',
     //"url('fl9.jpg')"
   ],
   p19: [
-    "url('p23.jpg')",
-    "url('p32.jpeg')",
-    "url('p46.jpeg')"
+    'p23.jpg',
+    'p32.jpeg',
+    'p46.jpeg'
   ],
   p20: [
-    "url('p27.jpg')",
+    'p27.jpg',
     //"url('p52.jpg')"
   ],
   // p21: [
 
   // ],
   p22: [
-    "url('p38.jpeg')",
+    'p38.jpeg',
     //"url('fl9.jpg')"
   ],
   p23: [
-    "url('p39.jpg')",
-    "url('p62.JPG')"
+    'p39.jpg',
+    'p62.JPG'
   ],
   p24: [
-    "url('p43.jpeg')",
-    "url('p44.jpeg')"
+    'p43.jpeg',
+    'p44.jpeg'
   ],
   // p25: [
   //   "url('p38.jpg')",
@@ -758,15 +761,15 @@ const carousels = {
   //   //"url('fl9.jpg')"
   // ],
   s1: [
-    "url('s1.jpg')",
+    's1.jpg',
   ],
   s2: [
-    "url('s2.jpeg')",
+    's2.jpeg',
   ],
   wu1: [
     // "url('w1.jpg')",
     // "url('w2.jpg')",
-    "url('w3.JPG')",
+    'w3.JPG',
   ],
 };
 
