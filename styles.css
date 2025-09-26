@@ -236,9 +236,9 @@ strong {
     z-index: 100;
     top: 0;
     color: var(--1st);
-
     width: 100vw;
-    backdrop-filter: saturate(50%) blur(60px);
+    backdrop-filter: saturate(50%) blur(70px);
+    filter: drop-shadow(1px 1px 18px black);
 }
 
 .links {
@@ -430,7 +430,7 @@ strong {
 }
 
 .six {
-   transform: perspective(100px) rotateY(35deg) rotate(28deg);
+    transform: perspective(100px) rotateY(35deg) rotate(28deg);
     transform-origin: left center;
     left: 28%;
     bottom: 57%;
@@ -812,8 +812,7 @@ a:hover {
     min-height: 150vh;
     overflow: hidden;
     transition: height 0.5s ease;
-        display: flex
-;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -900,8 +899,10 @@ a:hover {
 }
 
 .w-categories span.active {
-  background: var(--1st);   /* your highlight bg */
-  color: var(--2nd);        /* text color change */
+    background: var(--1st);
+    /* your highlight bg */
+    color: var(--2nd);
+    /* text color change */
 }
 
 .w-up {
@@ -918,334 +919,287 @@ a:hover {
 .no-w {
     display: none;
 }
- .clients-section {
-      text-align: center;
+
+.clients-section {
+    text-align: center;
     margin: 20vh 0;
     width: 100%;
     padding: 30px 20px;
     background: #fff;
-    
+
     border-radius: 16px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    }
+}
 
-    .clients-section h2 {
-      margin-bottom: 25px;
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #222;
-    }
+.clients-section h2 {
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #222;
+}
 
-    .carousel {
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-      margin: 15px 0;
-      background-color: #fff;
-    }
 .carousel {
-  position: relative;
-  overflow: hidden; /* hide the overflow logos */
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: 15px 0;
+    background-color: #fff;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    /* hide the overflow logos */
 }
 
 .carousel::before,
 .carousel::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 30px; /* how wide the fade is */
-  height: 100%;
-  z-index: 2;
-  pointer-events: none; /* so clicks pass through */
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 30px;
+    /* how wide the fade is */
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    /* so clicks pass through */
 }
 
 .carousel::before {
-  left: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 1), transparent);
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), transparent);
 }
 
 .carousel::after {
-  right: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 1), transparent);
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), transparent);
 }
 
-    .carousel-track {
-      display: flex;
-      width: max-content;
-      animation: scroll 35s linear infinite;
-    }
+.carousel-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 35s linear infinite;
+}
 
-    .carousel-row {
-      display: flex;
-      gap: 40px;
-      padding: 10px 0;
-    }
+.carousel-row {
+    display: flex;
+    gap: 40px;
+    padding: 10px 0;
+}
 
-    .carousel-row img {
-      height: 60px;
-      max-width: 150px;
-      object-fit: contain;
-      /* filter: grayscale(100%); */
-      transition: filter 0.3s ease;
-    }
+.carousel-row img {
+    height: 60px;
+    max-width: 150px;
+    object-fit: contain;
+    /* filter: grayscale(100%); */
+    transition: filter 0.3s ease;
+}
 
-    /* .carousel-row img:hover {
+/* .carousel-row img:hover {
       filter: grayscale(0%);
     } */
-     .cta{
-        margin: 0;
-     }
-     .open{
-        display: none;
-     }
-     .stats{
-        box-shadow: 0 0 40px #000;
-     }
-     .logo{
-        /* padding: 20px; */
-     }
-     .open{
-        color: var(--1st);   
-     }
+.cta {
+    margin: 0;
+}
 
-     .old-nav{
-        background-color: var(--2nd);
-     }
-     .links{
-        padding: 5vh 0vh 15vh 0;
-     }
-     .process{
-        
-        background-color: var(--2nd);
-     }
-     .p-cards{
-        position: relative;
-        top: 25%;
-        left:50%;
-        transform: translate(-50%, -50%);
-        width: 150vw;
-        height: 600px;
-        will-change: transform;
-     }
-     .p-card{
-        position: absolute;
-        width: 300px;
-        height: 550px;
-        top: 50%;
-        left: 50%;
-        transform-origin: center center;
-        margin-left: -250px;
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-        will-change: transform;
-        z-index: 100;
-     }
-     .p-card-img{
-        flex: 1;
-        border-radius: 0.5em;
-        overflow: hidden;
-    
-     }
-     .p-card-img img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-     .p-card-content{
-        border-radius: 0.5em;
-    background: var(--btn);
-    color: var(--2nd);
-    padding: 0 20px;
-     }
-     .card-content p{
-        text-align: left;
-        color: var(--1st);
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 1.25;
-     }
-     .step-counter{
-        position: absolute;
-        top: 150px;
-        display: flex;
-        flex-direction: column;
-        
-     }
-     .counter-title, .count{
-        position: relative;
-        width: 1200px;
-        /* height: 150px; */
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        overflow: hidden;
-     }
-     .counter-title{
-        position: absolute;
+.open {
+    display: none;
+}
+
+.stats {
+    box-shadow: 0 0 40px #000;
+}
+
+.logo {
+    /* padding: 20px; */
+}
+
+.open {
+    color: var(--1st);
+}
+
+.old-nav {
+    background-color: var(--2nd);
+}
+
+.links {
+    padding: 5vh 0vh 15vh 0;
+}
+
+.process {
+
+    background-color: var(--2nd);
+}
+
+.counter-title {
+   
     height: 60px;
     background: var(--2nd);
     z-index: 10;
     width: 100vw;
     padding: 0 2em;
-     }
-     .count{
-        top: 10px;
-        height: 400px;
-        padding: 0 2em;
-        /* transform: translateY(-100px); */
-     }
-     .count-container{
-        position: relative;
-        /* transform: translateY(150px); */
-        will-change: transform;
+}
 
-     }
-     .step-counter h1{
-        width: 100%;
-        position: relative;
-        color: var(--1st);
-        text-transform: uppercase;
-        font-weight: 900;
-        font-size: 150px; 
-        line-height: 1;
-        letter-spacing: -0.04em;
-        will-change: transform;
+.empty {
+    opacity: 0;
+}
 
-     }
-     .empty{
-        opacity: 0;
-     }
-     .steps{
-        position: relative;
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-     }
-     .counter-title h2{
-            border-radius: 20px;
+.counter-title h2 {
+    border-radius: 20px;
     border: 2px solid var(--1st);
     padding: 0 5px;
     width: fit-content;
-     }
-     @media (max-width:900px) {
-        .counter-title{
-            /* height: 30px;  */
+}
 
-        }
-        .counter-title h1{
-            font-size: 30px;
 
-        }
-        .count{
-            top: 0px;
-            left: -10px;
+.steps {
+    display: flex;
+    overflow: hidden;
+    padding: 15vh 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 
-        }
-        .cards{
-            top: 27.5%;
-        }
-        .p-card{
-            width:350px;
-            height: 500px;
-        }
-        .step-counter h1{
-            font-size: 120px;
-        }
-     }
 
-     @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
+.p-cards {
+    display: flex;
+    width: max-content;
+    gap: 5vw; /* spacing between cards */
+    padding: 0 2em;
+    will-change: transform;
+    z-index: 100;
+    align-items: stretch;
+    overflow: hidden; /* ensures all cards are same height */
+}
+.step-about{
+    padding: 1em 2em;
+    width: 100%;
+    max-width: 1000px;
+}
+.p-card {
+    width: 30vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 0.5em;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
 
-    /* 🔥 Responsive */
-    @media (max-width: 1024px) {
-      .carousel-row { gap: 30px; }
-      .carousel-row img { height: 50px; }
-    }
-    @media (max-width: 768px) {
-      .clients-section { padding: 20px; }
-      .clients-section h2 { font-size: 1.3rem; }
-      .carousel-row { gap: 25px; }
-      .carousel-row img { height: 40px; }
-    }
-    @media (max-width: 480px) {
-      .clients-section h2 { font-size: 1.1rem; }
-      .carousel-row { gap: 20px; }
-      .carousel-row img { height: 30px; max-width: 100px; }
-    }
-/* .d-1{
-        background: url(d1.jpg) no-repeat center center / cover;
-    }
-    .d-2{
-        background: url(d2.jpg) no-repeat center center / cover;
-    }
-    .d-3{
-        background: url(d3.jpg) no-repeat center center / cover;
-    }
-    .d-4{
-        background: url(d4.jpg) no-repeat center center / cover;
-    }
-    .d-5{
-        background: url(d5.jpg) no-repeat center center / cover;
-    }
-    .d-6{
-        background: url(d6.jpg) no-repeat center center / cover;
-    }.d-7{
-        background: url(d7.jpg) no-repeat center center / cover;
-    }
-    .d-8{
-        background: url(d8.jpg) no-repeat center center / cover;
-    }
-    .d-9{
-        background: url(d9.jpg) no-repeat center center / cover;
-    }
-    .d-10{
-        background: url(d10.jpg) no-repeat center center / cover;
-    }
-    .d-11{
-        background: url(d11.jpg) no-repeat center center / cover;
-    }
-    .d-12{
-        background: url(d12.jpg) no-repeat center center / cover;
-    }
-    .d-13{
-        background: url(d13.jpg) no-repeat center center / cover;
-    }
-    .d-14{
-        background: url(d14.jpg) no-repeat center center / cover;
-    }
-    .d-15{
-        background: url(d15.jpg) no-repeat center center / cover;
-    }
-    .d-16{
-        background: url(d16.jpg) no-repeat center center / cover;
-    }
-    .d-17{
-        background: url(d17.jpg) no-repeat center center / cover;
+.p-card-img {
+    height: 80%; /* fixed height for images */
+    overflow: hidden;
+    border-radius: 0.5em 0.5em 0 0;
+}
+
+.p-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* keeps image ratio, fills the box */
+}
+
+.p-card-content {
+    padding: 0 1em;
+    flex-shrink: 0;
+    height: 20%;
+    background: var(--btn);
+    color: var(--2nd); /* prevents content from shrinking */
+}
+
+.card-content p {
+    text-align: left;
+    color: var(--1st);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.old-nav {
+    box-shadow: 0 0 40px #000;
+}
+.c-tag{
+    border: 2px solid var(--1st);
+    color: var(--1st);
+}
+@media (max-width:900px) {
+    .counter-title {
+        /* height: 30px;  */
+
     }
 
-.d-18{
-        background: url(d18.jpg) no-repeat center center / cover;
+    .counter-title h1 {
+        font-size: 30px;
+
     }
-    .d-19{
-        background: url(d19.jpg) no-repeat center center / cover;
+    
+   
+
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
     }
-    .d-20{
-        background: url(d20.jpg) no-repeat center center / cover;
+
+    100% {
+        transform: translateX(-50%);
     }
-    .d-21{
-        background: url(d21.jpg) no-repeat center center / cover;
+}
+
+/* 🔥 Responsive */
+@media (max-width: 1024px) {
+    .carousel-row {
+        gap: 30px;
     }
-    .d-22{
-        background: url(d22.jpg) no-repeat center center / cover;
-    } */
-/* .d-1{
-        background: url(d1.jpg) no-repeat center center / cover;
-    } */
+
+    .carousel-row img {
+        height: 50px;
+    }
+    .step-about p{
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .clients-section {
+        padding: 20px;
+    }
+
+    .clients-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .carousel-row {
+        gap: 25px;
+    }
+
+    .carousel-row img {
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .clients-section h2 {
+        font-size: 1.1rem;
+    }
+
+    .carousel-row {
+        gap: 20px;
+    }
+
+    .carousel-row img {
+        height: 30px;
+        max-width: 100px;
+    }
+}
+
 @media(max-width: 900px) {
-    .logo{
+    .logo {
         padding: 10px;
     }
+
     .c-container {
         flex-direction: column;
     }
@@ -1257,7 +1211,8 @@ a:hover {
     .form-section {
         padding: 60px 24px;
     }
-    .open{
+
+    .open {
         display: block;
     }
 }
@@ -1291,6 +1246,13 @@ a:hover {
 }
 
 @media (max-width: 1100px) {
+    .p-card{
+        width: 70vw;
+        height: 40vh;
+    }
+    .p-cards{
+        gap: 2vw;
+    }
     .services {
         height: 350vh;
     }
@@ -1305,7 +1267,7 @@ a:hover {
 
     }
 
-    
+
     .card-details {
         width: 100%;
     }
@@ -1387,10 +1349,21 @@ a:hover {
         display: none;
     }
 
-.clients-section{
-            margin: 50vh 0;
+    .clients-section {
+        margin: 50vh 0;
     }
-
+    .c-section2{
+        margin: 80px 0;
+        background: transparent;
+        padding: 0;
+    }
+    .car2{
+        background: transparent;
+        width: 100vw;
+    }
+    .c-section2::before{
+        display: none;
+    }
     /* .a-img {
         width: 110px;
         position: absolute;
@@ -1424,14 +1397,16 @@ a:hover {
 
 /* Small screens tweaks */
 @media (max-width: 640px) {
-    
-    .card{
+
+    .card {
         align-items: center;
         flex-direction: column;
     }
-    .card-details p{
+
+    .card-details p {
         font-size: 3vw;
     }
+
     .tag {
         font-size: 10px;
     }
@@ -1456,7 +1431,7 @@ a:hover {
 
     .three {
         right: 5%;
-        bottom: 53%;
+        bottom: 55%;
         color: rgb(190, 182, 182);
         text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.752);
     }
@@ -1468,12 +1443,12 @@ a:hover {
 
     .five {
         right: 5%;
-        bottom: 31%;
+        bottom: 40%;
     }
 
     .six {
-        left: 23%;
-        bottom: 48%;
+        left: 25%;
+        bottom: 50%;
     }
 
     .category {
