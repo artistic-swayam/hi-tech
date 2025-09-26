@@ -1120,7 +1120,7 @@ a:hover {
     box-shadow: 0 0 40px #000;
 }
 .c-tag{
-    border: 2px solid var(--1st);
+    border: 1px solid var(--1st);
     color: var(--1st);
 }
 @media (max-width:900px) {
