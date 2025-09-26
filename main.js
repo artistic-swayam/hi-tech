@@ -56,6 +56,13 @@ function menu() {
       duration: 1.2, ease: "power3.out"
     })
   });
+
+  // const overlays = document.querySelectorAll('.overlay-l');
+  // overlays.forEach(overlay => {
+  //   overlay.addEventListener('click', () => {
+  //     menu.style.display = 'none';
+  //   });
+  // });
 }
 
 
@@ -190,109 +197,125 @@ function show() {
   });
 
 }
-function card(){
-  document.addEventListener("DOMContentLoaded",()=>{
-    gsap.registerPlugin(ScrollTrigger);
-    const lenis = new Lenis();
-    lenis.on("scroll",ScrollTrigger.update);
-    gsap.ticker.add((time)=>{
-      lenis.raf(time*1000);
-    });
-    gsap.ticker.lagSmoothing(0);
+// function card(){
+//   document.addEventListener("DOMContentLoaded",()=>{
+//     gsap.registerPlugin(ScrollTrigger);
+//     // const lenis = new Lenis();
+//     // lenis.on("scroll",ScrollTrigger.update);
+//     // gsap.ticker.add((time)=>{
+//     //   lenis.raf(time*1000);
+//     // });
+//     // gsap.ticker.lagSmoothing(0);
   
 
-  const stickySection = document.querySelector(".steps");
-  const stickyHeight = window.innerHeight * 2;
-  const cards = document.querySelectorAll(".p-card");
-  const countContainer = document.querySelector(".count-container");
-  const totalCards = cards.length;
+//   const stickySection = document.querySelector(".steps");
+//   const stickyHeight = window.innerHeight * 2;
+//   const cards = document.querySelectorAll(".p-card");
+//   const countContainer = document.querySelector(".count-container");
+//   const totalCards = cards.length;
 
-  ScrollTrigger.create({
-    trigger: stickySection,
-    start:"top top",
-    end:`+=${stickyHeight}px`,
-    pin: true,
-    pinSpacing: true,
-    onUpdate: (self)=>{
-      positionCards(self.progress);
-    },
-  });
+//   ScrollTrigger.create({
+//     trigger: stickySection,
+//     start:"top top",
+//     end:`+=${stickyHeight}px`,
+//     pin: true,
+//     pinSpacing: true,
+//     onUpdate: (self)=>{
+//       positionCards(self.progress);
+//     },
+//   });
 
-  const getRadius = ()=>{
-    return window.innerWidth < 900
-    ? window.innerHeight * 7.5
-    : window.innerHeight * 2.5;
-  };
-  const arcAngle = Math.PI * 0.4;
-  const startAngle = Math.PI / 2 -arcAngle / 2;
+//   const getRadius = ()=>{
+//     return window.innerWidth < 900
+//     ? window.innerHeight * 7.5
+//     : window.innerHeight * 2.5;
+//   };
+//   const arcAngle = Math.PI * 0.4;
+//   const startAngle = Math.PI / 2 -arcAngle / 2;
 
-  function positionCards(progress = 0){
-    const radius = getRadius();
-    const totalTravel = 1 + totalCards / 7.5;
-    const adjustedProgress = (progress * totalTravel -1)*0.75;
+//   function positionCards(progress = 0){
+//     const radius = getRadius();
+//     const totalTravel = 1 + totalCards / 0.1;
+//     const adjustedProgress = (progress * totalTravel -1)*0.01;
 
-    cards.forEach((card,i)=>{
-      const normalizedProgress = (totalCards-1-i)/totalCards;
-      const cardProgress = normalizedProgress+adjustedProgress;
-      const angle = startAngle + arcAngle * cardProgress;
+//     cards.forEach((card,i)=>{
+//       const normalizedProgress = (totalCards-1-i)/totalCards;
+//       const cardProgress = normalizedProgress+adjustedProgress;
+//       const angle = startAngle + arcAngle * cardProgress;
 
-      const x = Math.cos(angle) * radius;
-      const y = Math.sin(angle) * radius;
-      const rotation = (angle-Math.PI/2)*(180/Math.PI);
+//       const x = Math.cos(angle) * radius;
+//       const y = Math.sin(angle) * radius;
+//       const rotation = (angle-Math.PI/2)*(180/Math.PI);
 
-      gsap.set(card,{
-        x:x,
-        y:-y+radius,
-        rotation: -rotation,
-        transformOrigin:"center center",
-      });
-    });
-  }
+//       gsap.set(card,{
+//         x:x,
+//         y:-y+radius,
+//         rotation: -rotation,
+//         transformOrigin:"center center",
+//       });
+//     });
+//   }
 
-  positionCards(0);
-  let currentCardIndex = 0;
+//   positionCards(0);
+//   let currentCardIndex = 0;
 
-  const options = {
-    root: null,
-    rootMargin: "0% 0%",
-    threshold:0.5
-  };
+//   const options = {
+//     root: null,
+//     rootMargin: "0% 0%",
+//     threshold:0.5
+//   };
 
-  const observer = new IntersectionObserver((entries)=>{
-    entries.forEach((entry)=>{
-      if(entry.isIntersecting){
-        lastScrollY = window.scrollY;
-        let cardIndex = Array.from(cards).indexOf(entry.target);
-        currentCardIndex = cardIndex;
+//   const observer = new IntersectionObserver((entries)=>{
+//     entries.forEach((entry)=>{
+//       if(entry.isIntersecting){
+//         lastScrollY = window.scrollY;
+//         let cardIndex = Array.from(cards).indexOf(entry.target);
+//         currentCardIndex = cardIndex;
 
-        const targetY = 150 - currentCardIndex*300;
-        gsap.to(countContainer,{
-          y:targetY,
-          duration:0.3,
-          ease: "power1.out",
-          overwrite:true,
+//         const targetY = 150 - currentCardIndex*300;
+//         gsap.to(countContainer,{
+//           y:targetY,
+//           duration:0.3,
+//           ease: "power1.out",
+//           overwrite:true,
           
-        });
-      }
-    });
-  },options);
-  cards.forEach((card)=>{
-    observer.observe(card);
-  });
+//         });
+//       }
+//     });
+//   },options);
+//   cards.forEach((card)=>{
+//     observer.observe(card);
+//   });
 
-  window.addEventListener("resize", ()=> positionCards(0));
+//   window.addEventListener("resize", ()=> positionCards(0));
 
-});
+// });
 
 
-}
+//}
 lenis();
 menu();
 about();
 text();
 image();
 show();
-card();
+//card();
+gsap.registerPlugin(ScrollTrigger);
+
+  const container = document.querySelector(".p-cards");
+  const totalWidth = container.scrollWidth - window.innerWidth;
+
+  gsap.to(container, {
+    x: -totalWidth,
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".steps",
+      start: "top top",
+      end: () => `+=${totalWidth}`,
+      scrub: true,
+      pin: true
+    }
+  });
 
 
 gsap.registerPlugin(ScrollTrigger);
